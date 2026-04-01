@@ -22,20 +22,23 @@ This project implements a closed-loop liquid level control process,, featuring:
 * Frequency Inverter  
 * AC motor pump     
 
-📂 Project Structure  
-/Level_Control.zip        — Full TIA Portal v15.1 PLC project (ready to open and download)
-/PUMP_CONTROL.scl         — Standalone copy of the SCL source code for quick review
-/System_Overview          — Sketch of hardware connections and wiring
-/Screenshots              — HMI screenshots and TIA Portal configuration views
 
-⚙ Operational Flow  
+📂 Project Structure  
+/Level_Control.zip        — Full TIA Portal v15.1 PLC project (ready to open and download)  
+/PUMP_CONTROL.scl         — Standalone copy of the SCL source code for quick review  
+/System_Overview          — Sketch of hardware connections and wiring  
+/Screenshots              — HMI screenshots and TIA Portal configuration views    
+
+
+⚙ Operational Flow    
 * Normal Operation (10% < Level < 90%): H3 indicator active; pump runs at proportional power relative to current level.  
 * Low Level (≤ 10%): H1 indicator active; pump runs at near-maximum power to refill the tank quickly.  
 * High Level (≥ 90%): H2 indicator active; pump is released (disabled) to prevent overflow.  
 * Motor Power Calculation: POWER_SP = (1 - LIT / 27648) × 100% — fully linear, no PID required for this application.  
-* Safety Clamping: LIT is clamped to [0, 27648] and POWER_SP is floored at 0 before being applied to the motor  
+* Safety Clamping: LIT is clamped to [0, 27648] and POWER_SP is floored at 0 before being applied to the motor    
 
-📜 License
+
+📜 License  
 This project is licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).  
 
 ☕ If this project is helpfull for your application, please consider to support:  
