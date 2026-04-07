@@ -25,9 +25,9 @@ This project implements a closed-loop liquid level control process,, featuring:
 * Any AC motor pump (depends on process load)        
 
 
-📂 Project Structure  
-/Level_Control.zip        — Full TIA Portal v15.1 PLC project (ready to open and download)  
-/PUMP_CONTROL.scl         — Standalone copy of the SCL source code for quick review  
+📂 Project Structure    
+/PLC Program              — .zip file with full TIA Portal v15.1 PLC project (ready to open and download) + Standalone copy of the SCL source code for quick review  
+/PLC TAGS                 — Libre Office (.ods) and Excel (.xls) files with the PLC tags table  
 /System_Overview          — Sketch of hardware connections and wiring  
 /Screenshots              — HMI screenshots and TIA Portal configuration views    
 
