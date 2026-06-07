@@ -1,4 +1,4 @@
-**Level-Control_PLC_TIA-Portal_S7-1215C_KTP400**
+# Level-Control_PLC_TIA-Portal_S7-1215C_KTP400
 
 Developed entirely in TIA Portal v15.1 using Structured Text (SCL), with no third-party libraries.
 The function block is fully optimized for the S7-1215C AC/DC/Rly, keeping a lean and maintainable structure with room for future expansion.
@@ -41,8 +41,12 @@ This project implements a closed-loop liquid level control process,, featuring:
 * NO EMERGENCY CONTROL IS IMPLEMENTED       
 
 
-📜 License  
-This project is licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).  
+## 📜 License
+
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0).  
+See the full license text at: https://www.gnu.org/licenses/gpl-3.0.html.  
+
+---
 
 ☕ If this project is helpfull for your application, please consider to support:  
 https://www.paypal.com/donate/?hosted_button_id=8S8BJ9TT368VN
