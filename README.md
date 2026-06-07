@@ -5,7 +5,7 @@ The function block is fully optimized for the S7-1215C AC/DC/Rly, keeping a lean
 It's about a basic level control system for pump management.
 This project integrates a Siemens S7-1215C PLC with a KTP400 Basic HMI to provide real-time level monitoring, variable-speed pump control, and a clear status indicator workflow.      
 
-<<<< CAUTION: NO EMERGENCY CONTROL LOGIC IS IMPLEMENTED >>>>  
+⚠️ CAUTION: NO EMERGENCY CONTROL LOGIC IS IMPLEMENTED  
 
 ---
 
