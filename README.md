@@ -50,7 +50,7 @@ This project implements a closed-loop liquid level control process,, featuring:
 * High Level (≥ 90%): H2 indicator active; pump is released (disabled) to prevent overflow.  
 * Motor Power Calculation: POWER_SP = (1 - LIT / 27648) × 100% — fully linear, no PID is used in this application.  
 * Safety Clamping: LIT is clamped to [0, 27648] and POWER_SP is floored at 0 before being applied to the motor  
-* NO EMERGENCY CONTROL IS IMPLEMENTED       
+* ⚠️ CAUTION: NO EMERGENCY CONTROL IS IMPLEMENTED       
 
 ---
 
