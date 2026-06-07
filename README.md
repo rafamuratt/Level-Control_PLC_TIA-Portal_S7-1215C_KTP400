@@ -7,7 +7,10 @@ This project integrates a Siemens S7-1215C PLC with a KTP400 Basic HMI to provid
 
 <<<< CAUTION: NO EMERGENCY CONTROL LOGIC IS IMPLEMENTED >>>>  
 
-🚀 System Overview  
+---
+
+## 🚀 System Overview  
+
 This project implements a closed-loop liquid level control process,, featuring:  
 * Analog Level Monitoring (manual level entry via HMI): Reads a Level Indicating Transmitter (LIT) signal (0–27648 analog range) with built-in safety clamping to guard against out-of-range values.  
 * Proportional Pump Power: Motor power is calculated inversely proportional to tank level — the lower the level, the higher the pump output — ensuring smooth, continuous control.  
@@ -15,7 +18,10 @@ This project implements a closed-loop liquid level control process,, featuring:
 * Safety Envelopes: Input and output values are both clamped in software, ensuring the motor never receives a negative power setpoint and the analog signal stays within valid bounds. 
 * HMI Integration: All key process variables (motor power, status indicators) are mirrored to HMI tags for live operator visibility.     
 
-🛠 Hardware Stack  
+---
+
+## 🛠 Hardware Stack  
+
 * PLC: Siemens S7-1215C AC/DC/Rly    
 * HMI: Siemens KTP400 Basic    
 * Development Environment: TIA Portal v15.1    
@@ -24,15 +30,21 @@ This project implements a closed-loop liquid level control process,, featuring:
 * Any Frequency Inverter (depends on motor pump power)    
 * Any AC motor pump (depends on process load)        
 
+---
 
-📂 Project Structure    
+### 📂 Project Structure    
+
+```
 /PLC Program              — .zip file with full TIA Portal v15.1 PLC project (ready to open and download) + Standalone copy of the SCL source code for quick review  
 /PLC TAGS                 — Libre Office (.ods) and Excel (.xls) files with the PLC tags table  
 /System_Overview          — Sketch of hardware connections and wiring  
 /Screenshots              — HMI screenshots and TIA Portal configuration views    
+```
 
+---
 
-⚙ Operational Flow    
+## ⚙ Operational Flow    
+
 * Normal Operation (10% < Level < 90%): H3 indicator active; pump runs at proportional power relative to current level.  
 * Low Level (≤ 10%): H1 indicator active; pump runs at near-maximum power to refill the tank quickly.  
 * High Level (≥ 90%): H2 indicator active; pump is released (disabled) to prevent overflow.  
@@ -40,6 +52,7 @@ This project implements a closed-loop liquid level control process,, featuring:
 * Safety Clamping: LIT is clamped to [0, 27648] and POWER_SP is floored at 0 before being applied to the motor  
 * NO EMERGENCY CONTROL IS IMPLEMENTED       
 
+---
 
 ## 📜 License
 
